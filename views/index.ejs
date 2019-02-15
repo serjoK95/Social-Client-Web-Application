@@ -1,0 +1,132 @@
+<% include ../views/partials/header %>
+
+
+<br></br>
+
+<a class="btn btn-primary" data-toggle="collapse" href="#addperson" role="button" aria-expanded="false" aria-controls="addperson" style="margin-left: 10px">
+        Add New Person
+</a>
+
+<a class="btn btn-primary" data-toggle="collapse" href="#addlocation" role="button" aria-expanded="false" aria-controls="addlocation" style="margin-left: 10px">
+        Add New Location
+</a>
+
+<a class="btn btn-primary" data-toggle="collapse" href="#connectfriends" role="button" aria-expanded="false" aria-controls="connectfriends" style="margin-left: 10px">
+        Connect Friends
+</a>
+
+<a class="btn btn-primary" data-toggle="collapse" href="#addbirthplace" role="button" aria-expanded="false" aria-controls="addbirthplace" style="margin-left: 10px">
+        Add Birthplace
+</a>
+
+<a class="btn btn-primary" data-toggle="collapse" href="#addinterest" role="button" aria-expanded="false" aria-controls="addinterest" style="margin-left: 10px">
+        Add New Interest
+</a>
+
+<a class="btn btn-primary" data-toggle="collapse" href="#assigninterest" role="button" aria-expanded="false" aria-controls="assigninterest" style="margin-left: 10px">
+        Assign Interest
+</a>
+
+<br>
+
+<img src="/nodejs.png" class="logo" style="margin-left: 10px; margin-top: 10px"/>
+
+<img src="/neo4j.png" class="logo" style="margin-left: 5px; margin-top: 5px"/>
+
+<img src="/bootstrap.png" class="logo" style="margin-left: 5px"/>
+
+<img src="/html-css.png" class="logo" style="margin-left: 5px; margin-top: 30px"/>
+
+<img src="/javascript.png" class="logo"/>
+
+<br></br>
+
+<div class="collapse" id="addperson">
+    <div class="card card-body">
+    <h3>Add New Person</h3>
+    <form method="POST" action="/person/add">
+        <input type = "text" name="name" placeholder="Name" style="border-radius: 5px; font-style: oblique">
+        <input type="submit" value="Submit" class="btn btn-outline-dark btn-sm" style="font-style: oblique; margin-bottom:4px">
+    </form>
+    </div>
+</div>
+
+<div class="collapse" id="addlocation">
+        <div class="card card-body">
+                <h3>Add New Location</h3>
+                <form method="POST" action="/location/add">
+                    <input type = "text" name="city" placeholder="City" style="border-radius: 5px; font-style: oblique">
+                    <br>
+                    <input type = "text" name="state" placeholder="State" style="border-radius: 5px; font-style: oblique">
+                    <input type="submit" value="Submit" class="btn btn-outline-dark btn-sm" style="font-style: oblique; margin-bottom:4px">
+                </form>
+        </div>
+</div>
+
+<div class="collapse" id="connectfriends">
+        <div class="card card-body">
+                <h3>Connect Friends</h3>
+                <form method="POST" action="/friends/connect">
+                    <input type = "text" name="name1" placeholder="Name" style="border-radius: 5px; font-style: oblique">
+                    <input type = "text" name="name2" placeholder="Name" style="border-radius: 5px; font-style: oblique">
+                    <input type="submit" value="Submit" class="btn btn-outline-dark btn-sm" style="font-style: oblique; margin-bottom:4px">
+                </form>
+        </div>
+</div>
+
+
+<div class="collapse" id="addbirthplace">
+        <div class="card card-body">
+                <h3>Add Birthplace</h3>
+                <form method="POST" action="/person/born/add">
+                    <input type = "text" name="name" placeholder="Name" style="border-radius: 5px; font-style: oblique">
+                    <br>
+                    <input type = "text" name="city" placeholder="City" style="border-radius: 5px; font-style: oblique">
+                    <br>
+                    <input type = "text" name="state" placeholder="State" style="border-radius: 5px; font-style: oblique">
+                    <br>
+                    <input type = "text" name="year" placeholder="Year" style="border-radius: 5px; font-style: oblique">
+                    <input type="submit" value="Submit" class="btn btn-outline-dark btn-sm" style="font-style: oblique; margin-bottom:4px">
+                </form>
+        </div>
+</div>
+
+<div class="collapse" id="addinterest">
+        <div class="card card-body">
+        <h3>Add New Interest</h3>
+        <form method="POST" action="/person/interest/add">
+        <input type = "text" name="interest" placeholder="Interest" style="border-radius: 5px; font-style: oblique">
+        <input type="submit" value="Submit" class="btn btn-outline-dark btn-sm" style="font-style: oblique; margin-bottom:4px">
+        </form>
+        </div>
+    </div>
+
+
+<h3>People</h3>
+<div class="row">
+<% persons.forEach(function(person){ %>
+    <div class="col-md-2">
+            <div class="card card-body"><i class="fa fa-address-card"></i><a href="/person/<%= person.id %>"><%= person.name %></a></div>
+    </div>
+<% }) %>
+</div>
+
+<h3>Locations</h3>
+<div class="row">
+<% locations.forEach(function(location){ %>
+    <div class="col-md-2">
+            <div class="card card-body"><i class="fa fa-map-pin"></i><%= location.city %>, <%= location.state %></div>
+    </div>
+<% }) %>
+</div>
+
+<h3>Interests</h3>
+<div class="row">
+<% interests.forEach(function(interest){ %>
+    <div class="col-md-2">
+            <div class="card card-body"><i class="fa fa-heart-o"></i><%= interest.name %></div>
+    </div>
+<% }) %>
+</div>
+
+<% include ../views/partials/footer %>
