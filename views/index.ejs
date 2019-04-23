@@ -3,27 +3,27 @@
 
 <br></br>
 
-<a class="btn btn-primary" data-toggle="collapse" href="#addperson" role="button" aria-expanded="false" aria-controls="addperson" style="margin-left: 10px">
+<a class="btn btn-outline-dark btn-sm" data-toggle="collapse" href="#addperson" role="button" aria-expanded="false" aria-controls="addperson" style="margin-left: 10px">
         Add New Person
 </a>
 
-<a class="btn btn-primary" data-toggle="collapse" href="#addlocation" role="button" aria-expanded="false" aria-controls="addlocation" style="margin-left: 10px">
+<a class="btn btn-outline-dark btn-sm" data-toggle="collapse" href="#addlocation" role="button" aria-expanded="false" aria-controls="addlocation" style="margin-left: 10px">
         Add New Location
 </a>
 
-<a class="btn btn-primary" data-toggle="collapse" href="#connectfriends" role="button" aria-expanded="false" aria-controls="connectfriends" style="margin-left: 10px">
+<a class="btn btn-outline-dark btn-sm" data-toggle="collapse" href="#connectfriends" role="button" aria-expanded="false" aria-controls="connectfriends" style="margin-left: 10px">
         Connect Friends
 </a>
 
-<a class="btn btn-primary" data-toggle="collapse" href="#addbirthplace" role="button" aria-expanded="false" aria-controls="addbirthplace" style="margin-left: 10px">
+<a class="btn btn-outline-dark btn-sm" data-toggle="collapse" href="#addbirthplace" role="button" aria-expanded="false" aria-controls="addbirthplace" style="margin-left: 10px">
         Add Birthplace
 </a>
 
-<a class="btn btn-primary" data-toggle="collapse" href="#addinterest" role="button" aria-expanded="false" aria-controls="addinterest" style="margin-left: 10px">
+<a class="btn btn-outline-dark btn-sm" data-toggle="collapse" href="#addinterest" role="button" aria-expanded="false" aria-controls="addinterest" style="margin-left: 10px">
         Add New Interest
 </a>
 
-<a class="btn btn-primary" data-toggle="collapse" href="#assigninterest" role="button" aria-expanded="false" aria-controls="assigninterest" style="margin-left: 10px">
+<a class="btn btn-outline-dark btn-sm" data-toggle="collapse" href="#assigninterest" role="button" aria-expanded="false" aria-controls="assigninterest" style="margin-left: 10px">
         Assign Interest
 </a>
 
@@ -46,9 +46,9 @@
 <div class="collapse" id="addperson">
     <div class="card card-body">
     <h3>Add New Person</h3>
-    <form method="POST" action="/person/add">
-        <input type = "text" name="name" placeholder="Name" style="border-radius: 5px; font-style: oblique">
-        <input type="submit" value="Submit" class="btn btn-outline-dark btn-sm" style="font-style: oblique; margin-bottom:4px">
+    <form method="POST" class="form-inline" action="/person/add">
+        <input type = "text" class="form-control form-control-sm" name="name" placeholder="Name" style="border-radius: 5px; font-style: oblique; width: 200px">
+        <input type="submit" value="Submit" class="btn btn-outline-dark btn-sm" style="font-style: oblique; margin-left: 5px">
     </form>
     </div>
 </div>
@@ -56,11 +56,10 @@
 <div class="collapse" id="addlocation">
         <div class="card card-body">
                 <h3>Add New Location</h3>
-                <form method="POST" action="/location/add">
-                    <input type = "text" name="city" placeholder="City" style="border-radius: 5px; font-style: oblique">
-                    <br>
-                    <input type = "text" name="state" placeholder="State" style="border-radius: 5px; font-style: oblique">
-                    <input type="submit" value="Submit" class="btn btn-outline-dark btn-sm" style="font-style: oblique; margin-bottom:4px">
+                <form method="POST" class="form-inline" action="/location/add">
+                    <input type = "text" class="form-control form-control-sm" name="city" placeholder="City" style="border-radius: 5px; font-style: oblique; width: 200px;">
+                        <input type = "text" class="form-control form-control-sm" name="state" placeholder="State" style="border-radius: 5px; font-style: oblique; width:200px">
+                        <input type="submit" value="Submit" class="btn btn-outline-dark btn-sm" style="font-style: oblique;">
                 </form>
         </div>
 </div>
