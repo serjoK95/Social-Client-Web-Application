@@ -17,19 +17,19 @@
 <form method="POST" class = "form-inline" action="/friends/connect">
     <input type = "hidden" name="id" value="<%= id %>" style="border-radius: 5px; font-style: oblique">
     <input type = "hidden" name="name1" value="<%= name %>" style="border-radius: 5px; font-style: oblique">
-    <input type = "text" class="form-control form-control-sm" name="name2" placeholder="Name" style="border-radius: 5px; font-style: oblique; margin-right: 3px">
+    <input type = "text" class="form-control form-control-sm" name="name2" placeholder="Name" style="border-radius: 5px; font-style: oblique; margin-right: 5px">
     <input type="submit" value="Submit" class="btn btn-outline-dark btn-sm" style="font-style: oblique">
 </form>
 <br>
 
 <h3>Add Birthplace</h3>
-<form method="POST" action="/person/born/add">
+<form method="POST" class = "form-inline" action="/person/born/add">
     <input type = "hidden" name="id" value="<%= id %>" style="border-radius: 5px; font-style: oblique">
     <input type = "hidden" name="name" value="<%= name %>" style="border-radius: 5px; font-style: oblique">
-    <input type = "text" name="city" placeholder="City" style="border-radius: 5px; font-style: oblique">
-    <input type = "text" name="state" placeholder="State" style="border-radius: 5px; font-style: oblique">
-    <input type = "text" name="year" placeholder="Year" style="border-radius: 5px; font-style: oblique">
-    <input type="submit" value="Submit" class="btn btn-default btn-sm" style="background-color: grey;border-radius: 5px; font-style: oblique">
+    <input type = "text" class="form-control form-control-sm" name="city" placeholder="City" style="border-radius: 5px; font-style: oblique; margin-right: 5px">
+    <input type = "text" class="form-control form-control-sm" name="state" placeholder="State" style="border-radius: 5px; font-style: oblique; margin-right: 5px">
+    <input type = "text" class="form-control form-control-sm" name="year" placeholder="Year" style="border-radius: 5px; font-style: oblique; margin-right: 5px">
+    <input type="submit" class="btn btn-outline-dark btn-sm" value="Submit" class="btn btn-default btn-sm" style="font-style: oblique">
 </form>
 
 <% include ../views/partials/footer %>
