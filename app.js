@@ -163,7 +163,8 @@ app.post('/person/born/add', function(req, res){
         });
 });
 
-//Add Interest Route
+//Assign Interest Route
+
 
 app.post('/person/interest/add', function(req, res){
     var interest = req.body.interest;
@@ -179,6 +180,9 @@ app.post('/person/interest/add', function(req, res){
             console.log(error);
         });
 });
+
+//Assign Interest Route
+
 
 // Person Route
 app.get('/person/:id', function(req, res){
