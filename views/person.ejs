@@ -14,11 +14,11 @@
 <% } %>
 
 <h3>Add Friend</h3>
-<form method="POST" action="/friends/connect">
+<form method="POST" class = "form-inline" action="/friends/connect">
     <input type = "hidden" name="id" value="<%= id %>" style="border-radius: 5px; font-style: oblique">
     <input type = "hidden" name="name1" value="<%= name %>" style="border-radius: 5px; font-style: oblique">
-    <input type = "text" name="name2" placeholder="Name" style="border-radius: 5px; font-style: oblique">
-    <input type="submit" value="Submit" class="btn btn-default btn-sm" style="background-color: grey;border-radius: 5px; font-style: oblique">
+    <input type = "text" class="form-control form-control-sm" name="name2" placeholder="Name" style="border-radius: 5px; font-style: oblique; margin-right: 3px">
+    <input type="submit" value="Submit" class="btn btn-outline-dark btn-sm" style="font-style: oblique">
 </form>
 <br>
 
