@@ -12,7 +12,8 @@
     "ejs": "^2.4.2",
     "express": "*",
     "morgan": "*",
-    "neo4j-driver": "^1.7.2"
+    "neo4j-driver": "^1.7.2",
+    "nodemon": "^1.19.0"
   },
   "author": "Serkan Koch",
   "license": "ISC"

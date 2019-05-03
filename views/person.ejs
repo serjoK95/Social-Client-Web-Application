@@ -13,6 +13,8 @@
     </ul>
 <% } %>
 
+</br>
+
 <h3>Add Friend</h3>
 <form method="POST" class = "form-inline" action="/friends/connect">
     <input type = "hidden" name="id" value="<%= id %>" style="border-radius: 5px; font-style: oblique">
@@ -20,7 +22,8 @@
     <input type = "text" class="form-control form-control-sm" name="name2" placeholder="Name" style="border-radius: 5px; font-style: oblique; margin-right: 5px">
     <input type="submit" value="Submit" class="btn btn-outline-dark btn-sm" style="font-style: oblique">
 </form>
-<br>
+
+</br>
 
 <h3>Add Birthplace</h3>
 <form method="POST" class = "form-inline" action="/person/born/add">
@@ -30,6 +33,16 @@
     <input type = "text" class="form-control form-control-sm" name="state" placeholder="State" style="border-radius: 5px; font-style: oblique; margin-right: 5px">
     <input type = "text" class="form-control form-control-sm" name="year" placeholder="Year" style="border-radius: 5px; font-style: oblique; margin-right: 5px">
     <input type="submit" class="btn btn-outline-dark btn-sm" value="Submit" class="btn btn-default btn-sm" style="font-style: oblique">
+</form>
+
+</br>
+
+<h3>Assign Interest</h3>
+<form method="POST" class = "form-inline" action="/person/interest/connect">
+    <input type = "hidden" name="id" value="<%= id %>" style="border-radius: 5px; font-style: oblique">
+    <input type = "hidden" name="name" value="<%= name %>" style="border-radius: 5px; font-style: oblique">
+    <input type = "text" class="form-control form-control-sm" name="interest" placeholder="Interest" style="border-radius: 5px; font-style: oblique; margin-right: 5px">
+    <input type="submit" value="Submit" class="btn btn-outline-dark btn-sm" style="font-style: oblique">
 </form>
 
 <% include ../views/partials/footer %>
