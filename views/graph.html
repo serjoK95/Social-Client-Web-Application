@@ -23,15 +23,23 @@
                 labels: {
                     "Person" : {
                         "caption": "name"
+                    },
+                    "Interest" : {
+                        "caption": "name",
+                        "color": "green"
                     }
                 },
                 relationships: {
                     "FRIENDS" : {
                         "caption": true,
                         "thickness": "count"
+                    },
+                    "DOES" : {
+                        "caption": true,
+                        "thickness": "count"
                     }
                 },
-                initial_cypher: "MATCH a=(:Person)-[r:FRIENDS]->(:Person) RETURN a"
+                initial_cypher: "MATCH a=(:Person)-[r:FRIENDS]->(:Person), b=(:Person)-[d:DOES]->(:Interest) RETURN a,b"
             }
             viz = new NeoVis.default(config);
             viz.render();

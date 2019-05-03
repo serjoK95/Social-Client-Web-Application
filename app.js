@@ -164,8 +164,29 @@ app.post('/person/born/add', function(req, res){
 });
 
 //Assign Interest Route
+app.post('/person/interest/connect', function(req, res){
+    var name = req.body.name;
+    var interest = req.body.interest;
+    var id = req.body.id;
+    //console.log(name);
 
+    session
+        .run("MATCH(a:Person {name:{nameParam}}),(b:Interest {name:{interestParam}}) MERGE (a)-[r:DOES]->(b) RETURN a,b", {nameParam: name, interestParam: interest})
+        .then(function(result){
+            if(id && id!= null){
+                res.redirect('/person/'+id);
+            }else{
+                res.redirect('/');
+            }
+            res.redirect('/');
+            session.close();
+        })
+        .catch(function(error){
+            console.log(error);
+        });
+});
 
+// Add Interest Route
 app.post('/person/interest/add', function(req, res){
     var interest = req.body.interest;
     //console.log(name);
@@ -180,8 +201,6 @@ app.post('/person/interest/add', function(req, res){
             console.log(error);
         });
 });
-
-//Assign Interest Route
 
 
 // Person Route
