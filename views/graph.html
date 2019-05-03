@@ -39,7 +39,7 @@
                         "thickness": "count"
                     }
                 },
-                initial_cypher: "MATCH a=(:Person)-[r:FRIENDS]->(:Person), b=(:Person)-[d:DOES]->(:Interest), c=(:Person)-[b:BORN_IN]->(:Location) RETURN a,b,c"
+                initial_cypher: "MATCH a=(:Person)-[r:FRIENDS]->(:Person), b=(:Person)-[d:DOES]->(:Interest), c=(:Person)-[l:BORN_IN]->(:Location) RETURN a,b,c"
             }
             viz = new NeoVis.default(config);
             viz.render();
