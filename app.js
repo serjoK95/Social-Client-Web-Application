@@ -20,7 +20,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 
-var driver = neo4j.driver("bolt://localhost", neo4j.auth.basic("neo4j", "1234"));
+var driver = neo4j.driver("bolt://localhost", neo4j.auth.basic("neo4j", "12345"));
 var session =  driver.session();
 
 
