@@ -23,29 +23,32 @@
                 server_password: "12345",
                 labels: {
                     "Person" : {
-                        "caption": "name"
+                        caption: "name",
+                        size: "pagerank",
+                        community: "community",
+                        color: ""
                     },
                     "Interest" : {
-                        "caption": "name",
-                        "color": "green"
+                        caption: "name",
+                        color: "green"
                     },
                     "Location" : {
-                        "caption": "city",
-                        "color": "yellow"
+                        caption: "city",
+                        color: "red"
                     }
                 },
                 relationships: {
                     "FRIENDS" : {
-                        "caption": true,
-                        "thickness": "count"
+                        caption: true,
+                        thickness: "count"
                     },
                     "DOES" : {
-                        "caption": true,
-                        "thickness": "count"
+                        caption: true,
+                        thickness: "count"
                     },
                     "BORN_IN" : {
-                        "caption": true,
-                        "thickness": "count"
+                        caption: true,
+                        thickness: "count"
                     }
                 },
                 initial_cypher: "MATCH a=(:Person)-[r:FRIENDS]->(:Person), b=(:Person)-[d:DOES]->(:Interest), c=(:Person)-[l:BORN_IN]->(:Location) RETURN a,b,c"
